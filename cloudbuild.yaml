@@ -5,14 +5,14 @@ steps:
       [
         'build',
         '-t',
-        'europe-west2-docker.pkg.dev/microservice-417900/reservations/production',
+        'us-east4-docker.pkg.dev/banded-cable-417921/reservations/production',
         '-f',
         'apps/reservations/Dockerfile',
         '.',
       ]
   - name: 'gcr.io/cloud-builders/docker'
     args:
-      ['push', 'europe-west2-docker.pkg.dev/microservice-417900/reservations/production']
+      ['push', 'us-east4-docker.pkg.dev/banded-cable-417921/reservations/production']
 
   # Auth
   - name: 'gcr.io/cloud-builders/docker'
@@ -20,13 +20,13 @@ steps:
       [
         'build',
         '-t',
-        'europe-west2-docker.pkg.dev/microservice-417900/auth/production',
+        'us-east4-docker.pkg.dev/banded-cable-417921/auth/production',
         '-f',
         'apps/auth/Dockerfile',
         '.',
       ]
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'europe-west2-docker.pkg.dev/microservice-417900/auth/production']
+    args: ['push', 'us-east4-docker.pkg.dev/banded-cable-417921/auth/production']
 
   # Notifications
   - name: 'gcr.io/cloud-builders/docker'
@@ -34,14 +34,14 @@ steps:
       [
         'build',
         '-t',
-        'europe-west2-docker.pkg.dev/microservice-417900/notifications/production',
+        'us-east4-docker.pkg.dev/banded-cable-417921/notifications/production',
         '-f',
         'apps/notifications/Dockerfile',
         '.',
       ]
   - name: 'gcr.io/cloud-builders/docker'
     args:
-      ['push', 'europe-west2-docker.pkg.dev/microservice-417900/notifications/production']
+      ['push', 'us-east4-docker.pkg.dev/banded-cable-417921/notifications/production']
 
   # Payments
   - name: 'gcr.io/cloud-builders/docker'
@@ -49,10 +49,10 @@ steps:
       [
         'build',
         '-t',
-        'europe-west2-docker.pkg.dev/microservice-417900/payments/production',
+        'us-east4-docker.pkg.dev/banded-cable-417921/payments/production',
         '-f',
         'apps/payments/Dockerfile',
         '.',
       ]
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'europe-west2-docker.pkg.dev/microservice-417900/payments/production']
+    args: ['push', 'us-east4-docker.pkg.dev/banded-cable-417921/payments/production']
