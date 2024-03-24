@@ -15,5 +15,11 @@ spec:
         app: reservations
     spec:
       containers:
-      - image: europe-west2-docker.pkg.dev/microservice-417900/reservations/production
-        name: reservations
+        - image: us-east4-docker.pkg.dev/banded-cable-417921/reservations/production
+          name: reservations
+          env:
+            - name: MONGODB_URI
+              valueFrom:
+                secretKeyRef:
+                  name: mongodb
+                  key: connectionString
