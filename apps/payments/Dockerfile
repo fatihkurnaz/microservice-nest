@@ -8,6 +8,7 @@ COPY tsconfig.json tsconfig.json
 COPY nest-cli.json nest-cli.json
 
 RUN npm install -g pnpm
+RUN npm i -g @nestjs/cli
 RUN pnpm install
 
 COPY apps/payments apps/payments
