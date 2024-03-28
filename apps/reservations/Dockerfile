@@ -7,7 +7,6 @@ COPY pnpm-lock.yaml ./
 COPY tsconfig.json tsconfig.json
 COPY nest-cli.json nest-cli.json
 
-RUN npm i -g @nestjs/cli
 RUN npm install -g pnpm
 
 RUN pnpm install
