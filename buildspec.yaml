@@ -7,7 +7,7 @@ phases:
   build:
     commands:
       - docker build -t reservations -f ./apps/reservations/Dockerfile .
-      - docker tag revervations:latest 654654318481.dkr.ecr.eu-west-2.amazonaws.com/revervations:latest
+      - docker tag reservations:latest 654654318481.dkr.ecr.eu-west-2.amazonaws.com/reservations:latest
       -
       - docker build -t auth -f ./apps/auth/Dockerfile .
       - docker tag auth:latest 654654318481.dkr.ecr.eu-west-2.amazonaws.com/auth:latest
@@ -19,7 +19,7 @@ phases:
       - docker tag notifications:latest 654654318481.dkr.ecr.eu-west-2.amazonaws.com/notifications:latest
   post_build:
     commands:
-      - docker push 654654318481.dkr.ecr.eu-west-2.amazonaws.com/revervations:latest
+      - docker push 654654318481.dkr.ecr.eu-west-2.amazonaws.com/reservations:latest
       - docker push 654654318481.dkr.ecr.eu-west-2.amazonaws.com/auth:latest
       - docker push 654654318481.dkr.ecr.eu-west-2.amazonaws.com/payments:latest
       - docker push 654654318481.dkr.ecr.eu-west-2.amazonaws.com/notifications:latest
