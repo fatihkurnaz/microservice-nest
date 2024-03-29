@@ -15,7 +15,7 @@ spec:
         app: payments
     spec:
       containers:
-      - image: us-east4-docker.pkg.dev/banded-cable-417921/payments/production
+      - image: 654654318481.dkr.ecr.eu-west-2.amazonaws.com/payments:latest
         name: payments
         env:
           - name: PORT
