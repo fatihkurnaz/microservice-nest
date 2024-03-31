@@ -12,7 +12,7 @@ export class AuthController {
 
   @Get()
   test() {
-    return 'okay';
+    return 'okay2';
   }
 
   @UseGuards(LocalAuthGuard)
